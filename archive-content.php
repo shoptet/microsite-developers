@@ -58,14 +58,14 @@
 
 
                     <a href="<?php echo $more_button_href; ?>" target="_blank" class="btn btn-secondary">
-                        <?php echo __($more_button_text, 'shoptet-wp-theme'); ?>
+                        <?php echo _e($more_button_text, 'shoptet'); ?>
                     </a>
 
                     <?php
                     } else { ?>
 
                     <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="btn btn-secondary">
-                        <?php echo __('Přejít na článek', 'shoptet-wp-theme'); ?>
+                        <?php echo _e('Go to article', 'shoptet'); ?>
                     </a>
 
                     <?php } ?>

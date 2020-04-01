@@ -39,9 +39,9 @@
 
         else : ?>
 
-            <h2><?php _e( 'Je nám líto, ale příspěvky nebyly nalezeny.', 'shp' ); ?></h2>
+            <h2><?php _e( 'We are sorry, no results were found', 'shoptet' ); ?></h2>
 
-            <p><?php _e( 'Zkuste prosím použít vyhledávání', 'shp' ); ?></p>
+            <p><?php _e( 'Try to use search, please', 'shoptet' ); ?></p>
 
             <?php get_template_part( 'template-parts/search/content', 'search' ); ?>
 
@@ -79,7 +79,7 @@
 
                     <?php the_excerpt(); ?>
 
-                    <!--<a href="<?php the_permalink(); ?>" class="btn btn-secondary"><?php echo __('Přejít', 'shoptet-wp-theme'); ?></a>-->
+                    <!--<a href="<?php the_permalink(); ?>" class="btn btn-secondary"><?php echo _e('Go', 'shoptet'); ?></a>-->
                 </article>
             </div>
 
@@ -88,9 +88,8 @@
             <?php
             endwhile;
 
-        else : ?>
-            Žádné výsledky nenalezeny.
-        <?php
+        else:
+            e_('No results found', 'shoptet');
         endif;
         ?>
 
@@ -99,7 +98,7 @@
         <div class="row">
             <div class="col-12">
                 <p class="text-right">
-                    <a href="<?php echo $newsPermalink; ?>" class="btn btn-secondary"><?php echo __('Všechny novinky', 'shoptet-wp-theme'); ?></a>
+                    <a href="<?php echo $newsPermalink; ?>" class="btn btn-secondary"><?php echo _e('All news', 'shoptet'); ?></a>
                 </p>
             </div>
         </div>
