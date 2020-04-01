@@ -60,8 +60,5 @@ class page_navigation_widget extends WP_Widget {
         );
     }
 } // page_navigation_widget end
-if (strpos($_SERVER["SERVER_NAME"], 'developers.shoptet.com') !== FALSE) {
-    add_filter( 'locale', 'en_US');
-}
 ?>
 
