@@ -60,11 +60,3 @@ class page_navigation_widget extends WP_Widget {
         );
     }
 } // page_navigation_widget end
-
-function resolveLanguage()
-{
-    return 'en_US';
-};
-add_filter('locale', 'resolveLanguage');
-?>
-
