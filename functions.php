@@ -21,6 +21,18 @@ if (get_option( 'close_comments_for_old_posts' ) && get_option( 'close_comments_
     add_filter('pings_open', '__return_false', 20, 2);
 }
 
+/**
+ * Add query arguments to post count api
+ */
+add_filter( 'shoptet_post_count_query_args', function($query_args) {
+    return [
+        'developersArticlesCount' => [
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        ],
+    ];
+} );
+
 function custom_excerpt_length($length) {
     return 25;
 }
