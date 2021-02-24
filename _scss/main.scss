@@ -7,6 +7,8 @@
 @import "../../scaffolding/vendor/bs/scss/tables";
 @import "modules/variables";
 
+@import "modules/panning";
+
 .homepage-archive-excerpt {
     display: flex;
     flex-flow: column;
