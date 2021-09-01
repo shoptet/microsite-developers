@@ -72,3 +72,11 @@ class page_navigation_widget extends WP_Widget {
         );
     }
 } // page_navigation_widget end
+
+add_action( 'wp_print_scripts', function () {
+    global $post;
+    if ( !is_a( $post, 'WP_Post' ) || 'contact' != $post->post_name ) {
+        wp_dequeue_script( 'google-recaptcha' );
+        wp_dequeue_script( 'wpcf7-recaptcha' );
+    }
+});
