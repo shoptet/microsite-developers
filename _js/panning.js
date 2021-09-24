@@ -5,6 +5,8 @@ $(function() {
   var startX;
   var scrollLeft;
 
+  if(!slider) return;
+
   slider.addEventListener('mousedown', function(e) {
     isDown = true;
     slider.classList.add('active');
